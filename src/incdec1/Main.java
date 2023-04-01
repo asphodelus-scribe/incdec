@@ -5,39 +5,34 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		boolean flag = true;
-		int numReps;
-		int c, x, n;
-		c=1; x=1; n=1;
+		int a, b, c, r;	
+		a=1; b=1; c=1;
 		Scanner s = new Scanner(System.in);
 		
 		System.out.println("enter number of repetitions");
-		numReps = s.nextInt();
+		r = s.nextInt();
+		System.out.println("enter a value");
+		a = s.nextInt();
+		System.out.println("enter b value");
+		b = s.nextInt();
 		System.out.println("enter c value");
 		c = s.nextInt();
-		System.out.println("enter x value");
-		x = s.nextInt();
-		System.out.println("enter n value");
-		n = s.nextInt();
-		System.out.println("Initial Values: c="+c+", x="+x+", n="+n);
-		run(c,n,x,numReps);
+		System.out.println("Initial Values: a="+a+", b="+b+", c="+c);
+		run(a,b,c,r);
+		s.close();
 	}
 	
-	public static void run(int c, int n, int x, int r) {
-		int cnew, xnew, nnew;
-		cnew=c;
-		xnew=x;
-		nnew=n;
+	public static void run(int a, int b, int c, int r) {
+		int anew, bnew, cnew;
 		for(int i = 0; i<r; i++) {
-			cnew=inc(c,n);
-			xnew=dec(x,c);
-			nnew=dec(n,x);
-			System.out.println("c="+cnew+"    x="+xnew+"    n="+nnew);
+			anew=inc(a,c);
+			bnew=dec(b,a);
+			cnew=dec(c,b);
+			System.out.println("a="+anew+"    b="+bnew+"    c="+cnew);
+			a=anew;
+			b=bnew;
 			c=cnew;
-			x=xnew;
-			n=nnew;
 		}
-
 	}
 	
 	public static int inc(int x, int n) {
