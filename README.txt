@@ -1,5 +1,5 @@
 Description:
-A three variable system used for generating complex patterns of digits, originally designed for procedurally generating art.
+A three variable system used for generating semi-complex patterns of digits, originally designed for procedurally generating art.
 For details on use of the program for art generation, see the appendix at the bottom of this document.
 *NOTE: this program uses only the integers 1 through 9 with wraparound, meaning that 9+1=1, and similarly that 2-3=9 etc.
 
